@@ -1,0 +1,9 @@
+.container {
+    display: block;
+  }
+  
+  @media (min-width: 640px) {
+    .container {
+      display: none;
+    }
+  }
