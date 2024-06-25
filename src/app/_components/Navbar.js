@@ -14,7 +14,7 @@ const Navbar = () => {
         <img src="/images/HobbyCue_Logo.png" alt="" />
       </div>
 
-      <div className="searchBox flex items-center border ">
+      <div className="searchBox flex items-center border rounded-sm ">
         <div>
           {" "}
           <input type="text" placeholder="search hear" />
@@ -33,18 +33,19 @@ const Navbar = () => {
           <p>Expolre</p>
         </div>
 
-           <div className="flex items-center justify-center gap-1">
-           <div className="w-[30px] p-0"><img src="/images/Hobbies.png" alt="" /></div>
-            <p>Hobbies</p>
-            <div className="menu-container relative">
-                  <button  onClick={togglePopup}   className="w-[30px]"><img src="/images/vector.png" alt="" /></button>
-                    {isPopupVisible && isPopupVisible ? <PopupMenu />:<></>}
-            </div>
-            
+        <div className="flex items-center justify-center gap-1">
+          <div className="w-[30px] p-0">
+            <img src="/images/Hobbies.png" alt="" />
+          </div>
+          <p>Hobbies</p>
+          <div className="menu-container relative">
+            <button onClick={togglePopup} className="w-[30px]">
+              <img src="/images/vector.png" alt="" />
+            </button>
+            {isPopupVisible && isPopupVisible ? <PopupMenu /> : <></>}
           </div>
         </div>
         <div className="w-[25px]">
-          {" "}
           <img src="/images/Vector (1).png" alt="" />
         </div>
         <div className="w-[30px]">
@@ -58,8 +59,8 @@ const Navbar = () => {
           Sign In
         </button>
       </div>
-
+    </div>
   );
 };
 
-export default Navbar
+export default Navbar;
