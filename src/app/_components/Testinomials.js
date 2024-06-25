@@ -13,7 +13,7 @@ const Testinomials = () => {
                     Are you a teacher or expert? Do you sell or rent out equipment, venue or event tickets? Or, you know someone who should <br/> be on hobbycue? Go ahead and Add your Own page
                  </div>
                  <button className=" h-[40px] border-2 border-[#8064A2] flex  items-center justify-center w-[122px] rounded-md  font-bold  mt-4 text-[#8064A2]"
-                 >Add New</button>
+                 >ADD New</button>
 
              </div>
              
