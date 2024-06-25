@@ -30,7 +30,7 @@ const Navbar = () => {
             <p>Hobbies</p>
             <div className="menu-container relative">
             <button  onClick={togglePopup}   className="w-[30px]"><img src="/images/vector.png" alt="" /></button>
-            {isPopupVisible && isPopupVisible ? <PopupMenu />:<></>}
+            {isPopupVisible && <PopupMenu />}
             </div>
             
            </div>
