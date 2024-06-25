@@ -1,6 +1,13 @@
-
-
+'use client'
+import { useState } from "react";
+import PopupMenu from "./PopupMenu";
 const Navbar = () => {
+  const [isPopupVisible, setPopupVisible] = useState(false);
+
+
+  const togglePopup = () => {
+    setPopupVisible(!isPopupVisible);
+  };
   return (
     <div className='nav_bar container mx-auto h-[80px] '>
     <div> 
@@ -21,7 +28,11 @@ const Navbar = () => {
            <div className="flex items-center justify-center gap-1">
            <div className="w-[30px] p-0"><img src="/images/Hobbies.png" alt="" /></div>
             <p>Hobbies</p>
-            <div className="w-[30px]"><img src="/images/vector.png" alt="" /></div>
+            <div className="menu-container relative">
+            <button  onClick={togglePopup}   className="w-[30px]"><img src="/images/vector.png" alt="" /></button>
+            {isPopupVisible && isPopupVisible ? <PopupMenu />:<></>}
+            </div>
+            
            </div>
            <div className="w-[25px]"> <img src="/images/Vector (1).png"  alt="" /></div>
             <div className="w-[30px]"><img src="/images/notifications_black_24dp 1.png" alt="" /></div>
