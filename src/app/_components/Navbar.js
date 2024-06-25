@@ -1,14 +1,30 @@
 "use client";
-import { useState } from "react";
+import React, { useState, useRef, useEffect } from 'react';
 import PopupMenu from "./PopupMenu";
 
 const Navbar = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);
-
+  const buttonRef = useRef(null);
+  
   const togglePopup = () => {
     setPopupVisible(!isPopupVisible);
     console.log("popshowed");
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (buttonRef.current && !buttonRef.current.contains(event.target)) {
+        setPopupVisible(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);  
+
+
   return (
     <div className="nav_bar container mx-auto h-[80px] ">
       <div>
@@ -40,10 +56,10 @@ const Navbar = () => {
           </div>
           <p>Hobbies</p>
           <div className="menu-container relative">
-            <button onClick={()=>togglePopup()} className="w-[30px] relative  ">
+          <button ref={buttonRef} onClick={togglePopup} className="w-[30px]   ">
               <img src="/images/vect.png" alt="" />
             </button>
-            {isPopupVisible && isPopupVisible ? <PopupMenu /> : <></>}
+            { isPopupVisible && <PopupMenu />}
           </div>
         </div>
         <div className="w-[25px]">

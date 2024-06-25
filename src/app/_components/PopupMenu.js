@@ -4,7 +4,7 @@ import './PopupMenu.css'; // optional for styling
 const PopupMenu = () => {
   return (
 
-    <div className="popup-menu text-black">
+    <div className="popup-menu text-black absolute">
       <ul>
         <li>People - Community</li>
         <li>Places - Venues</li>
