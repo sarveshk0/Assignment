@@ -7,6 +7,7 @@ const Navbar = () => {
 
   const togglePopup = () => {
     setPopupVisible(!isPopupVisible);
+    console.log("popshowed");
   };
   return (
     <div className="nav_bar container mx-auto h-[80px] ">
