@@ -40,7 +40,7 @@ const Navbar = () => {
           <p>Hobbies</p>
           <div className="menu-container relative">
             <button onClick={togglePopup} className="w-[30px]">
-              <img src="/images/Vector.png" alt="" />
+              <img src="/images/vect.png" alt="" />
             </button>
             {isPopupVisible && isPopupVisible ? <PopupMenu /> : <></>}
           </div>
@@ -52,7 +52,7 @@ const Navbar = () => {
           <img src="/images/notifications_black_24dp 1.png" alt="" />
         </div>
         <div className="W-[30PX]">
-          <img src="/images/product.png" alt="" />
+          <img src="/images/prod.png" alt="" />
         </div>
 
         <button className="border px-4 py-2  rounded border-purple">

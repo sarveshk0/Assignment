@@ -52,7 +52,7 @@ const Footer = () => {
                         <li>
                             <div className='bg-[#EFEDF0] w-[24px] h-[24px] rounded-full flex items-center justify-center'>
                             <div className='w-[16px] h-[16px] '>
-                            <img src="/google.png"  alt="" />
+                            <img src="/images/google1.png"  alt="" />
                             </div>
                             </div>
                         </li>
@@ -81,7 +81,7 @@ const Footer = () => {
                         <li>
                             <div className='bg-[#EFEDF0] w-[24px] h-[24px] rounded-full flex items-center justify-center'>
                             <div className='w-[16px] h-[16px] '>
-                            <img src="/images/google.png"  alt="" />
+                            <img src="/images/google1.png"  alt="" />
                             </div>
                             </div>
                         </li>
