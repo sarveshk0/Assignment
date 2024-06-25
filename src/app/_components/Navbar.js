@@ -29,8 +29,11 @@ const Navbar = () => {
            <div className="w-[30px] p-0"><img src="/images/Hobbies.png" alt="" /></div>
             <p>Hobbies</p>
             <div className="menu-container relative">
-            <button  onClick={togglePopup}   className="w-[30px]"><img src="/images/vector.png" alt="" /></button>
-            {isPopupVisible &&  <PopupMenu />}
+              <button onClick={togglePopup} className="w-[30px]">
+              <img src="/images/vector.png" alt="" />
+              {isPopupVisible && isPopupVisible ? <PopupMenu />:('')}
+            </button>
+            
             </div>
             
            </div>
