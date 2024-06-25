@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import PopupMenu from "./PopupMenu";
+
 const Navbar = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);
 
@@ -32,15 +33,12 @@ const Navbar = () => {
           <p>Expolre</p>
         </div>
 
-        <div className="flex items-center justify-center gap-1">
-          <div className="w-[30px] p-0">
-            <img src="/images/Hobbies.png" alt="" />
-          </div>
-          <p>Hobbies</p>
-          <div className="menu-container relative">
-            <div onClick={togglePopup} className="w-[30px]">
-              <img src="/images/vector.png" alt="" />
-              {isPopupVisible && isPopupVisible ? <PopupMenu />:('')}
+           <div className="flex items-center justify-center gap-1">
+           <div className="w-[30px] p-0"><img src="/images/Hobbies.png" alt="" /></div>
+            <p>Hobbies</p>
+            <div className="menu-container relative">
+                  <button  onClick={togglePopup}   className="w-[30px]"><img src="/images/vector.png" alt="" /></button>
+                    {isPopupVisible && isPopupVisible ? <PopupMenu />:<></>}
             </div>
             
           </div>
@@ -60,8 +58,8 @@ const Navbar = () => {
           Sign In
         </button>
       </div>
-    </div>
+
   );
 };
 
-export default Navbar;
+export default Navbar
